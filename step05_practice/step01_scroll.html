@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <style>
+        body {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .container {
+            height: 100vh;
+            overflow: auto;
+            scroll-snap-type: x proximity;
+        }
+        .area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+
+        .area:nth-child(2n-1) {
+            background: blueviolet;
+        }
+        .area:nth-child(2n) {
+            background: skyblue;
+        }
+
+        h1 {
+            color: white;
+            font-size: 100px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="area">
+            <h1 class="title">Skills</h1>
+            <p>Study Lectures</p>
+        </section>
+        <section class="area">
+            <h1 class="title">HTML</h1>
+            <p>markup language</p>
+        </section>
+        <section class="area">
+            <h1 class="title">CSS</h1>
+            <p>style sheet</p>
+        </section>
+    </div>
+</body>
+</html>
